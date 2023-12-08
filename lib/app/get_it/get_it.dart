@@ -3,6 +3,7 @@ import 'package:news_app/app/data/repository/home_repository.dart';
 import 'package:news_app/app/data/repository/i_home_repository.dart';
 import 'package:news_app/app/data/service/home_service.dart';
 import 'package:news_app/app/data/service/i_home_service.dart';
+import 'package:news_app/app/screens/categories/viewmodel/categories_viewmodel.dart';
 import 'package:news_app/app/screens/home/viewmodel/home_viewmodel.dart';
 import 'package:news_app/app/screens/main/viewmodel/main_viewmodel.dart';
 import 'package:news_app/app/screens/splash/viewmodel/splash_viewmodel.dart';
@@ -25,6 +26,9 @@ void setupViewModel() {
     )
     ..registerLazySingleton<HomeViewModel>(
       () => HomeViewModel(iHomeRepository: getIt()),
+    )
+    ..registerLazySingleton<CategoriesViewModel>(
+      () => CategoriesViewModel(iHomeRepository: getIt()),
     );
 }
 

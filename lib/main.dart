@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:news_app/app/components/navigation_helper/navigation_helper.dart';
 import 'package:news_app/app/get_it/get_it.dart';
 import 'package:news_app/app/screens/splash/view/splash_view.dart';
 
 void main() {
   setupGetIT();
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(const MyApp());
 }
 
