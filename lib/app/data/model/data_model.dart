@@ -17,7 +17,7 @@ class DataModel with _$DataModel {
     String? published_at,
     String? source,
     List<String>? categories,
-    int? relevance_score,
+    double? relevance_score,
     String? locale,
   }) = _DataModel;
 

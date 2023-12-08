@@ -31,7 +31,7 @@ mixin _$DataModel {
   String? get published_at => throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
   List<String>? get categories => throw _privateConstructorUsedError;
-  int? get relevance_score => throw _privateConstructorUsedError;
+  double? get relevance_score => throw _privateConstructorUsedError;
   String? get locale => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,7 +57,7 @@ abstract class $DataModelCopyWith<$Res> {
       String? published_at,
       String? source,
       List<String>? categories,
-      int? relevance_score,
+      double? relevance_score,
       String? locale});
 }
 
@@ -136,7 +136,7 @@ class _$DataModelCopyWithImpl<$Res, $Val extends DataModel>
       relevance_score: freezed == relevance_score
           ? _value.relevance_score
           : relevance_score // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
@@ -165,7 +165,7 @@ abstract class _$$DataModelImplCopyWith<$Res>
       String? published_at,
       String? source,
       List<String>? categories,
-      int? relevance_score,
+      double? relevance_score,
       String? locale});
 }
 
@@ -242,7 +242,7 @@ class __$$DataModelImplCopyWithImpl<$Res>
       relevance_score: freezed == relevance_score
           ? _value.relevance_score
           : relevance_score // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
@@ -304,7 +304,7 @@ class _$DataModelImpl implements _DataModel {
   }
 
   @override
-  final int? relevance_score;
+  final double? relevance_score;
   @override
   final String? locale;
 
@@ -385,7 +385,7 @@ abstract class _DataModel implements DataModel {
       final String? published_at,
       final String? source,
       final List<String>? categories,
-      final int? relevance_score,
+      final double? relevance_score,
       final String? locale}) = _$DataModelImpl;
 
   factory _DataModel.fromJson(Map<String, dynamic> json) =
@@ -414,7 +414,7 @@ abstract class _DataModel implements DataModel {
   @override
   List<String>? get categories;
   @override
-  int? get relevance_score;
+  double? get relevance_score;
   @override
   String? get locale;
   @override

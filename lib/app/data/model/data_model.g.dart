@@ -21,7 +21,7 @@ _$DataModelImpl _$$DataModelImplFromJson(Map<String, dynamic> json) =>
       categories: (json['categories'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      relevance_score: json['relevance_score'] as int?,
+      relevance_score: (json['relevance_score'] as num?)?.toDouble(),
       locale: json['locale'] as String?,
     );
 
