@@ -26,28 +26,3 @@ extension NameFormat on String {
     return capitalizedWords.join(' ');
   }
 }
-
-extension CurrencySymbol on String {
-  String get currencySymbol {
-    switch (this) {
-      case "TRY":
-        return "₺";
-      case "USD":
-        return "\$";
-      case "EUR":
-        return "€";
-      default:
-        return "";
-    }
-  }
-}
-
-extension CurrencyFormatter on String {
-  String formatPrice(String currency) {
-    if (currency == "USD") {
-      return "${currency.currencySymbol}$this";
-    } else {
-      return "$this${currency.currencySymbol}";
-    }
-  }
-}
